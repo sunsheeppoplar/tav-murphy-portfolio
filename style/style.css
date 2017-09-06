@@ -35,3 +35,20 @@ a {
 .nav-bar__link:hover {
 	color: rgb(51, 51, 51);
 }
+
+.videos-list {
+    box-sizing: border-box;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.videos-list__each {
+	margin-bottom: 0.625em;
+	width: 33.33%;
+}
+
+.videos-list__each__title {
+	font-size: 0.75em;
+}
