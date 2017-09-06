@@ -1,22 +1,40 @@
+/*
+	***color palette***
+
+	rgb(51, 51, 51) 'black'
+	rgb(252, 252, 252) 'white'
+	rgb(153, 153, 153) light grey
+*/
+
 body {
-	 font-family: 'Proxima Nova', Georgia, sans-serif;
-	 font-size: 16px;
-	 color: rgb(51, 51, 51);
-	 background-color: rgb(252, 252, 252);
+	font-family: 'Proxima Nova', Georgia, sans-serif;
+	font-size: 16px;
+	color: rgb(51, 51, 51);
+	background-color: rgb(252, 252, 252);
+	text-align: center;
 }
 
 a {
+	color: inherit;
 	text-decoration: none;
+}
+
+.contact {
+	height: 6.3em;
+}
+
+.contact p {
+	color: rgb(153, 153, 153);
+	font-size: 0.9em;
 }
 
 .nav-bar {
 	height: 10em;
 	margin: 4em 0em 0.5em 0em;
 	padding-bottom: 1em;
-	text-align: center;
 }
 
-.nav-bar:after {
+.nav-bar:after, .contact:after {
 	content: "";
 	display: inline-block;
 	border-bottom: 0.1em solid rgba(153, 153, 153, 0.4);
