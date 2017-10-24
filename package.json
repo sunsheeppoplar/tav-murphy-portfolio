@@ -4,7 +4,9 @@
   "description": "Vimeo-based portfolio",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "postinstall": "webpack -p",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +30,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "babel-preset-stage-1": "^6.1.18",
+    "express": "^4.16.2",
     "lodash": "^3.10.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -35,6 +38,7 @@
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
-    "redux-promise": "^0.5.3"
+    "redux-promise": "^0.5.3",
+    "webpack": "^1.12.9"
   }
 }
