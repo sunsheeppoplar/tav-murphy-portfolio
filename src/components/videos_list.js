@@ -17,7 +17,7 @@ class VideosList extends Component {
 		return _.map(this.props.videos, video => {
 			return (
 				<div key={video.name} className="videos-list__each" onClick={() => this.handleClick(video)}>
-					<img src={video.pictures.sizes[2].link} />
+					<img className="videos-list__each__img" src={video.pictures.sizes[2].link} />
 					<div className="videos-list__each__title">{video.name}</div>
 				</div>
 			);
