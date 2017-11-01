@@ -19,13 +19,24 @@ a {
 	text-decoration: none;
 }
 
-.about {
+.about__info {
 	display: flex;
+	margin: 0 11.5%;
+	width: 77%;
 }
 
-.about > div {
+.about__info > div {
 	width: 50%;
-	padding: 1em;
+}
+
+.about img {
+	height: 100%;
+	width: 100%;
+}
+
+.about__info__copy {
+	text-align: left;
+	margin-right: 2em;
 }
 
 .contact {
@@ -57,7 +68,10 @@ a {
 }
 
 .player-container {
+	height: 34em;
 	display: inline-block;
+	margin-bottom: 3em;
+	width: 90%;
 }
 
 .videos-list {
@@ -65,12 +79,19 @@ a {
 	display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 10%;
     text-align: center;
+	width: 80%;
 }
 
 .videos-list__each {
+	cursor: pointer;
 	margin-bottom: 0.625em;
 	width: 33.33%;
+}
+
+.videos-list__each__img:hover {
+	opacity: 0.8;
 }
 
 .videos-list__each__title {
@@ -85,5 +106,5 @@ a {
 	content: "";
 	display: inline-block;
 	border-bottom: 0.1em solid rgba(153, 153, 153, 0.4);
-	width: 70%;
+	width: 77%;
 }
