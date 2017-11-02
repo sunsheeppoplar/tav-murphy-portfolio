@@ -19,6 +19,10 @@ a {
 	text-decoration: none;
 }
 
+.about {
+	margin-bottom: 2.5em;
+}
+
 .about__info {
 	display: flex;
 	margin: 0 11.5%;
