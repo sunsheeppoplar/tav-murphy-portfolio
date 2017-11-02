@@ -5,7 +5,7 @@ class NavBar extends Component {
 	render() {
 		return(
 			<div className="nav-bar wrapper">
-				<h1 className="nav-bar__header">TAVNER MURPHY</h1>
+				<h1 className="nav-bar__header"><Link to="/">TAVNER MURPHY</Link></h1>
 				<h4 className="nav-bar__subheader">Director of Photogrphy</h4>
 				<div>
 					<Link to="/" className="nav-bar__link">Work</Link>
