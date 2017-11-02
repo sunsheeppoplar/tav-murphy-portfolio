@@ -5,7 +5,7 @@ class Contact extends Component {
 		return(
 			<div className="contact">
 				<p><a href="mailto:tavmurphy@gmail.com">tavmurphy@gmail.com</a></p>
-				<p>(561) 000-0000</p>
+				<p>(561) 329-6587</p>
 			</div>
 		);
 	}
