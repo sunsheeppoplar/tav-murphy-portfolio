@@ -19,10 +19,6 @@ a {
 	text-decoration: none;
 }
 
-.about {
-	margin-bottom: 2.5em;
-}
-
 .about__info {
 	display: flex;
 	margin: 0 11.5%;
@@ -43,13 +39,13 @@ a {
 	margin-right: 2em;
 }
 
-.contact {
-	height: 6.3em;
-}
-
 .contact p {
 	color: rgb(153, 153, 153);
 	font-size: 0.9em;
+}
+
+.contact p:nth-child(2) {
+	margin-bottom: 2.5em;
 }
 
 .nav-bar {
@@ -76,6 +72,10 @@ a {
 	display: inline-block;
 	margin-bottom: 3em;
 	width: 90%;
+}
+
+.wrapper {
+	margin-bottom: 1.5em;
 }
 
 .videos-list {
@@ -106,7 +106,7 @@ a {
 }
 
 /* pseudo-selectors */
-.about:after, .contact:after, .nav-bar:after {
+.wrapper:after {
 	content: "";
 	display: inline-block;
 	border-bottom: 0.1em solid rgba(153, 153, 153, 0.4);

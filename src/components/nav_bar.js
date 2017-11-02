@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class NavBar extends Component {
 	render() {
 		return(
-			<div className="nav-bar">
+			<div className="nav-bar wrapper">
 				<h1 className="nav-bar__header">TAVNER MURPHY</h1>
 				<h4 className="nav-bar__subheader">Director of Photogrphy</h4>
 				<div>

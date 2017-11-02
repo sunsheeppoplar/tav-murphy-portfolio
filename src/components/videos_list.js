@@ -26,8 +26,10 @@ class VideosList extends Component {
 
 	render() {
 		return(
-			<div className="videos-list">
-				{this.renderVideos()}
+			<div className="wrapper">
+				<div className="videos-list">
+					{this.renderVideos()}
+				</div>
 			</div>
 		);
 	}

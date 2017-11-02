@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class About extends Component {
 	render() {
 		return(
-			<div className="about">
+			<div className="about wrapper">
 				<div className="about__info">
 					<div className="about__info__copy">
 						Arma virumque cano, Troiae qui primus ab oris
