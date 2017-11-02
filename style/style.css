@@ -67,7 +67,7 @@ a {
 	margin: 0em 0.7em;
 }
 
-.nav-bar__link:hover, .contact a:hover {
+.nav-bar__link:hover, .nav-bar__link--selected, .contact a:hover {
 	color: rgb(51, 51, 51);
 }
 
