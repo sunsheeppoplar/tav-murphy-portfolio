@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { Element as ScrollElement } from 'react-scroll';
 import VideosList from './videos_list';
 import ReactPlayer from 'react-player';
 
@@ -26,7 +27,9 @@ class Home extends Component {
 		// deliberate empty strings - vid player behaves a bit oddly when trying to override defaults with css otherwise
 		return(
 			<div>
-				<ReactPlayer url={selectedVideoUrl}  height='' width='' className="player-container"/>
+				<ScrollElement name="react-player">
+					<ReactPlayer url={selectedVideoUrl}  height='' width='' className="player-container"/>
+				</ScrollElement>
 				<VideosList history={this.props.history} />
 			</div>
 		);
