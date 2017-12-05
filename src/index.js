@@ -4,26 +4,24 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import promise from 'redux-promise';
-
+import { fetchVideos, selectVideo } from './actions'
 import reducers from './reducers';
-import About from './components/about';
-import Contact from './components/contact';
-import Home from './components/home';
-import NavBar from './components/nav_bar';
+import MainContainer from './container/MainContainer'
 
-const createStoreWithMiddleWare = applyMiddleware(promise)(createStore);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
+const store = createStore(reducers,
+	composeEnhancers(
+	    applyMiddleware(promise)
+	  )
+	)
+
+store.dispatch(fetchVideos());
 
 ReactDOM.render(
-	<Provider store={createStoreWithMiddleWare(reducers)}>
+	<Provider store={store}>
 		<BrowserRouter>
-			<div>
-				<NavBar />
-				<Switch>
-					<Route path="/about" component={About} />
-					<Route path="/contact" component={Contact} />
-					<Route path="/:id?" component={Home} />
-				</Switch>
-			</div>
+			<MainContainer/>
 		</BrowserRouter>
 	</Provider>
   , document.querySelector('.container')

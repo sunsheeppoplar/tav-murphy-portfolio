@@ -1,39 +1,35 @@
-import _ from 'lodash';
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-
+import { Route } from 'react-router-dom'
 import VideosList from './videos_list';
 import ReactPlayer from 'react-player';
+import { connect } from 'react-redux'
+import { selectVideo } from '../actions'
 
 class Home extends Component {
 
 	render() {
-		let selectedVideoUrl;
-
-		// at index (/), id === undefined
-		const differentVideoSelected = this.props.match.params.id;
-
-		if (differentVideoSelected) {
-			_.map(this.props.videos, function(video) {
-				if (video.slug === differentVideoSelected) {
-					selectedVideoUrl = video.link;
-				}
-			})
-		} else {
-			selectedVideoUrl = 'https://vimeo.com/90509568'
-		}
-
+		const { videos, selectedVideo, selVideo } = this.props
 		return(
 			<div>
-				<ReactPlayer url={selectedVideoUrl} className="player-container"/>
-				<VideosList history={this.props.history} />
+				<ReactPlayer url={selectedVideo.link} className="player-container"/>
+				<VideosList videos={videos} selectedVideo={selVideo}/>
 			</div>
 		);
 	}
 }
 
-function mapStateToProps(state) {
-	return { videos: state.videos }
+const mapStateToProps = (reducer) => {
+  const { videos = [], selectedVideo } = reducer
+  return {
+      videos,
+			selectedVideo
+  }
 }
 
-export default connect(mapStateToProps)(Home);
+const mapDispatchToProps = dispatch => {
+	return {
+		selVideo: (link) => dispatch(selectVideo(link))
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
