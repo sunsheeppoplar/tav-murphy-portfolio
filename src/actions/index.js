@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export const FETCH_VIDEOS = 'fetch_videos';
 export const SELECT_VIDEO = 'select_video';
+export const SELECT_MOBILE_NAV = 'select_mobile_nav';
 
 const ROOT_URL = 'https://api.vimeo.com/users/tavmurphy/videos'
 const MODIFIER = '?sort=modified_time'
@@ -14,6 +15,12 @@ export function fetchVideos() {
 		type: FETCH_VIDEOS,
 		payload: request
 	};
+}
+
+export function selectMenu() {
+	return {
+		type: SELECT_MOBILE_NAV
+	}
 }
 
 export function selectVideo(video) {

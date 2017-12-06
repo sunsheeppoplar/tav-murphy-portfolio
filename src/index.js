@@ -9,7 +9,7 @@ import reducers from './reducers';
 import About from './components/about';
 import Contact from './components/contact';
 import Home from './components/home';
-import NavBar from './components/nav_bar';
+import Navigation from './components/navigation';
 
 const createStoreWithMiddleWare = applyMiddleware(promise)(createStore);
 
@@ -17,7 +17,7 @@ ReactDOM.render(
 	<Provider store={createStoreWithMiddleWare(reducers)}>
 		<BrowserRouter>
 			<div>
-				<NavBar />
+				<Navigation />
 				<Switch>
 					<Route path="/about" component={About} />
 					<Route path="/contact" component={Contact} />
