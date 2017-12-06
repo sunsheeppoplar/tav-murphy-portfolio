@@ -6,7 +6,7 @@ class Header extends Component {
 		return (
 			<div>
 				<h1 className="nav-bar__header"><Link to="/">TAVNER MURPHY</Link></h1>
-				<h4 className="nav-bar__subheader">Director of Photogrphy</h4>
+				<h4 className="nav-bar__subheader">Director of Photography</h4>
 			</div>
 		)
 	}
