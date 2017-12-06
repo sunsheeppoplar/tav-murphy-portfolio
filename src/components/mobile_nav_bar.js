@@ -9,16 +9,10 @@ import AnimateHeight from 'react-animate-height';
 class MobileNavBar extends Component {
 	constructor() {
 		super();
-
-		this.state = {
-			test: 1
-		}
 	}
 
 
 	handleClick() {
-		console.log(this.state, 'state')
-		console.log(this.props, 'props')
 		this.props.selectMenu();
 	}
 
@@ -26,7 +20,6 @@ class MobileNavBar extends Component {
 		const { isClosed } = this.props;
 		const height = isClosed ? 0 : 100;
 		const navBarClass = isClosed ? '' : "nav-bar-mobile--open";
-		const navLinkClass = isClosed;
 
 		return (
 			<div>
