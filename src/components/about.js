@@ -10,7 +10,7 @@ class About extends Component {
 						screened at film festivals around the country and world. A backpacker, photographer, and music
 						junkie, he thrives on telling stories through visual imagery and highlighting the unconventional,
 						the uncomfortable, and the extraordinary.
-
+						<br />
 						Past Clients include: Dropbox, VICE Media, i-D, Red Bull, Omaze, DreamworksTV, Okayplayer, American
 						Eagle,  Complex, True Entertainment, The Salvation Army
 					</div>
