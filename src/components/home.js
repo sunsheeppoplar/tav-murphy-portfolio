@@ -21,14 +21,14 @@ class Home extends Component {
 				}
 			})
 		} else {
-			selectedVideoUrl = 'https://vimeo.com/79537796'
+			selectedVideoUrl = 'https://vimeo.com/250668972'
 		}
 
 		// deliberate empty strings - vid player behaves a bit oddly when trying to override defaults with css otherwise
 		return(
 			<div>
 				<ScrollElement name="react-player">
-					<ReactPlayer url={selectedVideoUrl}  height='' width='' className="player-container"/>
+					<ReactPlayer url={selectedVideoUrl}  height={500} width={1200} className="player-container" />
 				</ScrollElement>
 				<VideosList history={this.props.history} />
 			</div>
