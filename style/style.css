@@ -123,6 +123,14 @@ a {
 
 /* media queries */
 @media (max-width: 37.5em) {
+	.about__info {
+		flex-direction: column-reverse;
+	}
+
+	.about__info > div {
+		width: 100%;
+	}
+
 	.nav-bar {
 		height: 100%;
 		margin-top: 1em;
