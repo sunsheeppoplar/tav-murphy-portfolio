@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Scroll, { Helpers } from 'react-scroll';
+import Scroll, { ScrollLink } from 'react-scroll';
 
-class ScrollLink extends Component {
+class Scroller extends Component {
 	render() {
 		return (
 			<div {...this.props}>
@@ -11,4 +11,4 @@ class ScrollLink extends Component {
 	}
 }
 
-export default Helpers.Scroll(ScrollLink);
+export default ScrollLink(Scroller);

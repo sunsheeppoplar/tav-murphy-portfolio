@@ -3,7 +3,7 @@ import React,  { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchVideos, selectVideo } from '../actions'
 
-import ScrollLink from './scroll_link';
+import Scroller from './scroller';
 
 
 class VideosList extends Component {
@@ -19,10 +19,10 @@ class VideosList extends Component {
 	renderVideos() {
 		return _.map(this.props.videos, video => {
 			return (
-				<ScrollLink className="videos-list__each" key={video.name} smooth={true} to="react-player" onClick={() => this.handleClick(video)}>
+				<Scroller className="videos-list__each" key={video.name} smooth={true} to="react-player" onClick={() => this.handleClick(video)}>
 					<img className="videos-list__each__img" src={video.pictures.sizes[2].link} />
 					<div className="videos-list__each__title">{video.name}</div>
-				</ScrollLink>
+				</Scroller>
 			);
 		})
 	}
