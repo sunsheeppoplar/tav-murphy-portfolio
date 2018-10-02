@@ -21,15 +21,14 @@ a {
 
 .about__info {
 	display: flex;
-	margin: 0 11.5%;
-	width: 77%;
+	margin-bottom: 3em;
 }
 
 .about__info > div {
 	width: 50%;
 }
 
-.about img {
+.about__info__image {
 	height: 100%;
 	width: 100%;
 }
@@ -37,6 +36,35 @@ a {
 .about__info__copy {
 	text-align: left;
 	margin-right: 2em;
+}
+
+.about__info__logos {
+	width: 100%;
+}
+
+.about__logos-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.about__logos__header {
+	flex: 0 1 100%;
+}
+
+.about__logos__item {
+	margin-bottom: 1em;
+}
+
+.about__logos__item__image {
+	height: 100px;
+	object-fit: contain;
+	width: 250px;
+}
+
+.about-wrapper {
+	margin: 0 11.5%;
+	width: 77%;
 }
 
 .contact p {
@@ -129,6 +157,10 @@ a {
 
 	.about__info > div {
 		width: 100%;
+	}
+
+	.about__logos-container {
+		justify-content: center;
 	}
 
 	.nav-bar {

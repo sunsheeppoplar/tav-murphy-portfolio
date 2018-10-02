@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import promise from 'redux-promise';
 
 import reducers from './reducers';
-import About from './components/about';
+import About from './components/About/About';
 import Contact from './components/contact';
 import Home from './components/home';
 import Navigation from './components/navigation';
