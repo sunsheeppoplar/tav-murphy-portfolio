@@ -103,6 +103,10 @@ a {
 	color: rgb(51, 51, 51);
 }
 
+.nav-bar__subheader {
+	font-size: 1.5em;
+}
+
 .player-container {
 	height: 34em;
 	display: inline-block;
@@ -177,6 +181,10 @@ a {
 		display: flex;
 		justify-content: center;
 		margin-bottom: 0.5em;
+	}
+
+	.nav-bar__subheader {
+		font-size: 1em;
 	}
 
 	.player-container {
