@@ -12,8 +12,11 @@ class VideosList extends Component {
 	}
 
 	handleClick(video) {
-		this.props.selectVideo(video);
-		this.props.history.push(video.slug)
+		const { history, selectVideo } = this.props;
+		const { name, slug } = video;
+
+		selectVideo(video);
+		history.push(slug, { name });
 	}
 
 	renderVideos() {

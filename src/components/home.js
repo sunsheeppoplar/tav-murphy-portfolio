@@ -7,28 +7,25 @@ import VideosList from './videos_list';
 import ReactPlayer from 'react-player';
 
 class Home extends Component {
-
 	render() {
-		let selectedVideoUrl;
+		let videoUrl = 'https://vimeo.com/250668972';
 
-		// at index (/), id === undefined
-		const differentVideoSelected = this.props.match.params.id;
+		// at index (/), state is undefined
+		const { location: { pathname, state: { name = ''} = {} }, videos } = this.props;
 
-		if (differentVideoSelected) {
-			_.map(this.props.videos, function(video) {
-				if (video.slug === differentVideoSelected) {
-					selectedVideoUrl = video.link;
+		if (pathname && pathname !== '/') {
+			_.map(videos, function(video) {
+				if (video.name === name) {
+					videoUrl = video.link;
 				}
 			})
-		} else {
-			selectedVideoUrl = 'https://vimeo.com/250668972'
 		}
 
 		// deliberate empty strings - vid player behaves a bit oddly when trying to override defaults with css otherwise
 		return(
 			<div>
 				<ScrollElement name="react-player">
-					<ReactPlayer url={selectedVideoUrl}  height={500} width={1200} className="player-container" />
+					<ReactPlayer url={videoUrl} height={500} width={1200} className="player-container" />
 				</ScrollElement>
 				<VideosList history={this.props.history} />
 			</div>
