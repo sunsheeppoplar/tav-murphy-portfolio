@@ -25,17 +25,21 @@ a {
 }
 
 .about__info > div {
+	margin-top: 1em;
 	width: 50%;
 }
 
 .about__info__image {
-	height: 100%;
 	width: 100%;
 }
 
 .about__info__copy {
 	text-align: left;
 	margin-right: 2em;
+}
+
+.about__info__copy > p {
+	margin-top: 0;
 }
 
 .about__info__logos {
