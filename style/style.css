@@ -122,6 +122,10 @@ a {
 	margin-bottom: 1.5em;
 }
 
+.wrapper--mobile {
+	cursor: pointer;
+}
+
 .videos-list {
     box-sizing: border-box;
 	display: flex;
