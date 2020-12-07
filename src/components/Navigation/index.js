@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Header from './header';
-import DesktopNavBar from './desktop_nav_bar';
-import MobileNavBar from './mobile_nav_bar';
+import Header from '../header';
+import DesktopNavBar from './Bar/desktop';
+import MobileNavBar from './Bar/mobile';
 
 class Navigation extends Component {
 	constructor(props) {
@@ -25,8 +25,6 @@ class Navigation extends Component {
 
 	render() {
 		const screen = 660;
-
-		console.log(this.state.windowWidth)
 
 		if (this.state.windowWidth > screen) {
 			return(
