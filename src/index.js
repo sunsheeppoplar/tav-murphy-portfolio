@@ -9,7 +9,7 @@ import reducers from './reducers';
 import About from './components/About/About';
 import Contact from './components/contact';
 import Home from './components/home';
-import Navigation from './components/Navigation';
+import Navigation from './components/navigation';
 
 const createStoreWithMiddleWare = applyMiddleware(promise)(createStore);
 
@@ -25,6 +25,6 @@ ReactDOM.render(
 				</Switch>
 			</div>
 		</BrowserRouter>
-	</Provider>,
-	document.querySelector('.container')
+	</Provider>
+  , document.querySelector('.container')
 )
