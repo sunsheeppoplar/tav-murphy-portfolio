@@ -135,7 +135,11 @@ a {
 .videos-list__each {
 	cursor: pointer;
 	margin-bottom: 0.625em;
-	width: 33.33%;
+	width: 50%;
+}
+
+.videos-list__each__img {
+	width: 90%;
 }
 
 .videos-list__each__img:hover {
