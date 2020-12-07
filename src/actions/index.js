@@ -5,7 +5,7 @@ export const SELECT_VIDEO = 'select_video';
 export const SELECT_MOBILE_NAV = 'select_mobile_nav';
 
 const ROOT_URL = 'https://api.vimeo.com/users/tavmurphy/videos'
-const MODIFIER = '?sort=modified_time'
+const MODIFIER = '?sort=last_user_action_event_date'
 const TOKEN = '&access_token=60430fe4ed2d7795442b577cd0fcdd4b'
 
 export function fetchVideos() {
