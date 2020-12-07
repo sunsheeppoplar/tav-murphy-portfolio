@@ -23,7 +23,7 @@ class VideosList extends Component {
 		return _.map(this.props.videos, video => {
 			return (
 				<Scroller className="videos-list__each" key={video.name} smooth={true} to="react-player" onClick={() => this.handleClick(video)}>
-					<img className="videos-list__each__img" src={video.pictures.sizes[2].link} />
+					<img className="videos-list__each__img" src={video.pictures.sizes[3].link} />
 					<div className="videos-list__each__title">{video.name}</div>
 				</Scroller>
 			);
