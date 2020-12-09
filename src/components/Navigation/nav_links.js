@@ -4,6 +4,10 @@ const navLinks = [
         "to": "/"
     },
     {
+        "label": "Reel",
+        "to": "reel"
+    },
+    {
         "label": "About",
         "to": "/about"
     },
