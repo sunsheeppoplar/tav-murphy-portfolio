@@ -5,7 +5,7 @@ const navLinks = [
     },
     {
         "label": "Reel",
-        "to": "reel"
+        "to": "/reel"
     },
     {
         "label": "About",
