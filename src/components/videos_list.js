@@ -5,7 +5,9 @@ import { fetchVideos, selectVideo } from '../actions'
 
 class VideosList extends Component {
 	componentDidMount() {
-		this.props.fetchVideos();
+		if (_.isEmpty(this.props.videos)) {
+			this.props.fetchVideos();
+		}
 	}
 
 	handleClick(video) {
