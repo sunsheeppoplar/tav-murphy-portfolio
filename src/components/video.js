@@ -30,6 +30,15 @@ function mapStateToProps(state, ownProps) {
     const { location: { pathname }} = ownProps;
     const pathnameWithoutLeadingSlash = pathname.replace('/', '');
 
+    if (pathnameWithoutLeadingSlash === 'reel') {
+        return {
+            video: {
+                link: 'https://vimeo.com/250668972',
+                name: 'Reel'
+            }
+        }
+    }
+
     const video = _.find(state.videos, function(video) {
         const { slug } = video;
 
