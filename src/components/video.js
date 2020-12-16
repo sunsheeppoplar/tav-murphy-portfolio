@@ -44,7 +44,7 @@ function mapStateToProps(state, ownProps) {
         return {
             video: {
                 link: 'https://vimeo.com/250668972',
-                name: 'Reel'
+                name: ''
             }
         }
     }
