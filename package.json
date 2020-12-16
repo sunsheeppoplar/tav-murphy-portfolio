@@ -1,6 +1,6 @@
 {
   "name": "tav-murphy-portfolio",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Vimeo-based portfolio",
   "engines": {
     "node": "6.11.1"
