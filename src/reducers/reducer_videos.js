@@ -9,8 +9,12 @@ export default function(state = {}, action) {
 		data.map(o => o.selected = false);
 		let createUrlSlug = (video) => {
 			// a bit ugly, could potentially break up into functions:
-			// lower cases, replaces spaces with hyphens, finds original hyphens from vid name and truncates to just so there aren't patterns like video-name---example
-			const slug = video.name.toLowerCase().split(' ').join('-').replace(/-{2,}/g, '-')
+			// lower cases, replaces special characters, replaces spaces with hyphens, finds original hyphens from vid name and truncates to just so there aren't patterns like video-//name---"example"
+			const slug = video.name.toLowerCase()
+							.replace(/[^0-9a-zA-Z]+/g, '-')
+							.split(' ')
+							.join('-')
+							.replace(/-{2,}/g, '-')
 			return video.slug = slug;
 		}
 		data.map(createUrlSlug);

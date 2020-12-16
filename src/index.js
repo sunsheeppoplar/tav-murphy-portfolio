@@ -9,7 +9,8 @@ import reducers from './reducers';
 import About from './components/About/About';
 import Contact from './components/contact';
 import Home from './components/home';
-import Navigation from './components/navigation';
+import Navigation from './components/Navigation';
+import Video from './components/Video';
 
 const createStoreWithMiddleWare = applyMiddleware(promise)(createStore);
 
@@ -21,10 +22,11 @@ ReactDOM.render(
 				<Switch>
 					<Route path="/about" component={About} />
 					<Route path="/contact" component={Contact} />
-					<Route path="/:id?" component={Home} />
+					<Route path="/:id" component={Video} />
+					<Route path="/" component={Home} />
 				</Switch>
 			</div>
 		</BrowserRouter>
-	</Provider>
-  , document.querySelector('.container')
+	</Provider>,
+	document.querySelector('.container')
 )
