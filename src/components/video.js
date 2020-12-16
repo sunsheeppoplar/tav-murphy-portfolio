@@ -15,12 +15,22 @@ class Video extends Component {
     }
 
     render() {
-        const { video } = this.props
-        const videoUrl = video ? video.link : '';
+        const { video } = this.props;
+        const { link, name } = video;
+
+        const videoUrl = video ? link : '';
         
         return (
-            <div>
-                <ReactPlayer url={videoUrl} height={500} width={1200} className="player-container" />
+            <div className="player-layout">
+                <div className="player-container">
+                    <ReactPlayer
+                        className="video-player"
+                        url={videoUrl}
+                        height="100%"
+                        width="100%"
+                    />
+                </div>
+                <div className="player-title">{name}</div>
             </div>
         )
     }
