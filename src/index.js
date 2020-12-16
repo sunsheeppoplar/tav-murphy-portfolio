@@ -10,7 +10,7 @@ import About from './components/About/About';
 import Contact from './components/contact';
 import Home from './components/home';
 import Navigation from './components/Navigation';
-import Video from './components/Video';
+import Video from './components/video';
 
 const createStoreWithMiddleWare = applyMiddleware(promise)(createStore);
 
