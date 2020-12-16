@@ -112,10 +112,23 @@ a {
 }
 
 .player-container {
-	height: 34em;
-	display: inline-block;
-	margin-bottom: 3em;
-	width: 90%;
+	padding-top: 56.25%;
+	position: relative;
+}
+
+.player-layout {
+	margin: auto;
+	width: 75%;
+}
+
+.player-title {
+	text-align: right;
+}
+
+.video-player {
+	left: 0;
+	position: absolute;
+	top: 0;
 }
 
 .wrapper {
@@ -197,11 +210,6 @@ a {
 
 	.nav-bar__subheader {
 		font-size: 1em;
-	}
-
-	.player-container {
-		height: 100% !important;
-		width: 80% !important;
 	}
 
 	.wrapper:after {
