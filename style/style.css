@@ -6,6 +6,9 @@
 	rgb(153, 153, 153) light grey
 */
 
+/* should unify how we serve fonts, https://github.com/sunsheeppoplar/tav-murphy-portfolio/issues/52 */
+@import url("https://use.typekit.net/kbo5lmk.css");
+
 body {
 	font-family: 'Proxima Nova', Georgia, sans-serif;
 	font-size: 16px;
@@ -86,7 +89,11 @@ a {
 }
 
 .nav-bar__header {
-	font-size: 3.5em;
+	font-family: futura-pt,sans-serif;
+	font-size: 3.6em;
+	font-weight: 700;
+	font-style: normal;
+	margin-bottom: 0;
 }
 
 .nav-bar__header:hover {
@@ -103,7 +110,11 @@ a {
 }
 
 .nav-bar__subheader {
+	font-family: linotype-sabon, sans-serif;
 	font-size: 1.5em;
+	font-style: normal;
+	font-weight: 400;
+	margin: 0 0 16px 0;
 }
 
 .player-container {
